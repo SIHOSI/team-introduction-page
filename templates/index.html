@@ -57,23 +57,53 @@
                 justify-content: center;
             }
 
+            .team_container {
+                margin: 10px auto;
+                max-width: 1200px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .team_image {
+                margin: 5px;
+                width: 400px;
+            }
+
+            .team_image .image {
+                border-radius: 400px;
+            }
+
+            .team_comment {
+                margin: 10px;
+                width: 400px;
+            }
+
+            .team_comment .comment {
+                margin-top: 100px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .add_member {
+                width: 400px;
+            }
+
+            .add_member > #add_btn {
+                padding: 10px 0px 10px 0px;
+            }
+
             .mycards {
                 margin: 20px auto 0px auto;
                 width: 95%;
                 max-width: 1200px;
             }
 
-            .mybtns {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-
-                margin-top: 20px;
+            .card-img-top {
+                height: 300px;
             }
 
-            .mybtns > button {
-                margin-right: 10px;
+            .member-name {
+                text-align: center;
             }
         </style>
         <script></script>
@@ -83,89 +113,83 @@
         <div class="mytitle">
             <h1>TEAM_CARROT</h1>
         </div>
-        <form class="row g-3">
-            <div class="col-md-6">
-                <label for="inputName4" class="form-label">이름</label>
-                <input
-                    type="name"
-                    class="form-control"
-                    id="inputName4"
-                    placeholder="이름을 입력해주세요"
+        <div class="team_container">
+            <div class="team_image">
+                <img
+                    src="https://edgio.clien.net/F01/13982247/97ba7e9b5445d.gif?scale=width[420],options[limit]"
+                    class="image"
                 />
             </div>
-            <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">블로그 Url</label>
-                <input
-                    type="email"
-                    class="form-control"
-                    id="inputEmail4"
-                    placeholder="블로그 URL을 입력해주세요  "
-                />
+            <div class="team_comment">
+                <h2 class="comment">
+                    저희는 각자의 의견을 반영하여 프로젝트를 보다 완벽하게
+                    만들려고 노력하고, 머리가 아플때 당근을 흔듭니다(🥕흔들흔들)
+                </h2>
             </div>
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">Address</label>
-                <input
-                    type="text"
-                    class="form-control"
-                    id="inputAddress"
-                    placeholder="1234 Main St"
-                />
-            </div>
-            <div class="col-12">
-                <label for="inputAddress2" class="form-label">Address 2</label>
-                <input
-                    type="text"
-                    class="form-control"
-                    id="inputAddress2"
-                    placeholder="Apartment, studio, or floor"
-                />
-            </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity" />
-            </div>
-            <div class="col-md-4">
-                <label for="inputState" class="form-label">State</label>
-                <select id="inputState" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <label for="inputZip" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="inputZip" />
-            </div>
-            <div class="col-12">
-                <div class="form-check">
+
+            <form class="add_member">
+                <div id="name">
+                    <label for="inputName" class="form-label"></label>
                     <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
+                        type="name"
+                        class="form-control"
+                        id="inputName"
+                        placeholder="성함을 입력해주세요"
                     />
-                    <label class="form-check-label" for="gridCheck">
-                        Check me out
-                    </label>
                 </div>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </div>
-        </form>
+                <div id="blogUrl">
+                    <label for="inputEmail" class="form-label"></label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="inputEmail"
+                        placeholder="블로그 URL을 입력해주세요  "
+                    />
+                </div>
+                <div id="imageUrl">
+                    <label for="inputImage" class="form-label"></label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="inputImage"
+                        placeholder="프로필로 사용하실 이미지의 URL을 입력해주세요"
+                    />
+                </div>
+                <div id="hobby">
+                    <label for="inputhobby" class="form-label"></label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="inputHobby"
+                        placeholder="취미를 입력해주세요"
+                    />
+                </div>
+                <div id="determination">
+                    <label for="inputdet" class="form-label"></label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="inputDetermination"
+                        placeholder="하고 싶은 한마디를 입력해주세요"
+                    />
+                </div>
+                <div id="add_btn">
+                    <button type="submit" class="btn btn-primary">
+                        멤버 추가
+                    </button>
+                </div>
+            </form>
+        </div>
         <div class="mycards">
             <div class="row row-cols-1 row-cols-md-4 g-4" id="cards-box">
                 <div class="col">
                     <div class="card h-100">
                         <img
-                            src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRui4vL9nuvj3vaaw_MYL2ibZqusfQeWJjv0Q&usqp=CAU"
                             class="card-img-top"
                         />
-                        <div class="card-body">
-                            <h5 class="card-title">영화 제목이 들어갑니다</h5>
-                            <p class="card-text">
-                                여기에 영화에 대한 설명이 들어갑니다.
-                            </p>
-                            <p>⭐⭐⭐</p>
-                            <p class="mycomment">나의 한줄 평을 씁니다</p>
+                        <div class="member-body">
+                            <h5 class="member-name">이름이 들어갑니다</h5>
                         </div>
                     </div>
                 </div>
